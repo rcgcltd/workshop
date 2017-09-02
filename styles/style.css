@@ -1,0 +1,15 @@
+/* line 1, /home/kennedy/Development/rcgcltd.com/workshop/styles/style.scss */
+.reveal .slides section .fragment.highlight-gold.visible {
+  color: #FFDF00; }
+
+/* line 5, /home/kennedy/Development/rcgcltd.com/workshop/styles/style.scss */
+.reveal .slides section .fragment.highlight-gold,
+.reveal .slides section .fragment.highlight-current-gold {
+  opacity: 1;
+  visibility: inherit; }
+
+/* line 12, /home/kennedy/Development/rcgcltd.com/workshop/styles/style.scss */
+section ul {
+  list-style-type: none; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+.reveal .slides section .fragment.highlight-gold.visible {
+	color: #FFDF00;
+}
+
+.reveal .slides section .fragment.highlight-gold,
+.reveal .slides section .fragment.highlight-current-gold,{
+	opacity: 1;
+	visibility: inherit;
+}
+
+
+section ul {
+    list-style-type: none;
+}

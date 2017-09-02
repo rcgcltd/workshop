@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>RoxyChima Ltd | Workshop on web design</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="styles/style.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -25,7 +26,253 @@
 		<div class="reveal">
 			<div class="slides">
 				<section><h1 class="h1">Web design - the introduction</h1></section>
-				<section>Slide 2</section>
+                <section>
+                    <h1>web is the now and future</h1>
+                    <img src="images/web-future.jpg" alt="Web is the future">
+                </section>
+                <section>
+                    <h2>how the web works</h2>
+                    <img class="fragment" src="images/Scheme_dynamic_page_en.svg" alt="how webpage is transmitted">
+                </section>
+				<section>
+                    <h1 class="h1">HTML</h1>
+                    <p class=""><em class="fragment highlight-gold">Hypertext Markup Language</em></p>
+                    <hr>
+                    <ul>
+                        <li class="fragment highlight-gold">Creates structure of a web page</li>
+                        <li class="fragment highlight-gold">Displays the web page on a browser</li>
+                        <li class="fragment highlight-gold">consists of a series of elements</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Anatomy of an HTML element</h1>
+                    <img class="fragment" src="images/html-anatomy.png" alt="HTML anatomy">
+                    <img class="fragment" src="images/html-atribute.png" alt="html attribute">
+                    <aside class="notes">
+                        <p>The opening tag: where the element begins</p>
+                        <p>The closing tag: where the element ends</p>
+                        <p>Attributes contain extra information about the element that you don't want to appear in the actual content. Here, class is the attribute name, and editor-note is the attribute value. The class attribute allows you to give the element an identifier that can be later used to target the element with style information and other things.</p>
+                    </aside>
+
+                </section>
+                <section>
+                    <h3>nesting elements</h3>
+                    <p><strong>Example:</strong></p>
+                    <pre><code data-trim>
+                        <p>My cat is <strong>very</strong> grumpy.</p>
+                        </code>
+                    </pre>
+                    <h5><strong>Empty elements</strong></h5>
+                    <pre><code><img src="images/firefox-icon.png" alt="My test image"></code></pre>
+                </section>
+                <section>
+                    <h4>Anatomy of an HTML document</h4>
+                    <img src="images/html-document-ana.png" alt="Html Document anatomy">
+                </section>
+                <section>
+                    <section>
+                        <h1>important html elements</h1>
+                    </section>
+                    <section>
+                        <h2>Images</h2>
+                        <pre><code data-trim><img src="http://rcgcltd.com/images/corporate_logo_transparent_no_name.png" alt="RoxyChima logo"></code></pre>
+                    </section>
+                    <section>
+                        <h2>headings</h2>
+                        <pre><code data-trim>
+                            <h1>My main title</h1>
+                            <h2>My top level heading</h2>
+                            <h3>My subheading</h3>
+                            <h4>My sub-subheading</h4>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Pragraphs</h2>
+                        <pre><code data-trim><p>This is a single paragraph</p></code></pre>
+                    </section>
+                    <section>
+                        <h2>Lists</h2>
+                        <pre><code data-trim>
+                        <p>At RoxyChima, we’re a global community of</p>
+
+                        <ul>
+                          <li>technologists</li>
+                          <li>thinkers</li>
+                          <li>builders</li>
+                        </ul>
+
+                        <p>working together ... </p>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Links</h2>
+                        <pre><code data-trim><a href="http://rcgcltd.com/#about">About us</a></code></pre>
+                    </section>
+                </section>
+                <section>
+                    <h1>practical session</h1>
+                    <p>Create an html document</p>
+                </section>
+<!--                CSS session -->
+                <section><h1>CSS</h1><br><em>Cascading Stylesheet</em></section>
+                <section>
+                    <h2>Our page is <strong>bland</strong></h2>
+                    <p>we need to add style to it to make it more appealing!</p>
+                    <p><strong class="fragment highlight-gold">Use CSS to do that</strong></p>
+                </section>
+                <section>
+                    <h2>Let's see..</h2>
+                    <p class="fragment">Create a file <strong>"style.css"</strong> and put in the following:</p>
+                    <pre class="fragment">
+                        <code data-trim>
+                            p {
+                              color: red;
+                            }
+                        </code>
+                    </pre>
+                    <p class="fragment">Then in your "index.html" insert the link at the head section</p>
+                    <pre class="fragment"><code><link href="styles/style.css" rel="stylesheet" type="text/css"></code></pre>
+                </section>
+                <section>
+                    <h2>Anatomy of a CSS ruleset</h2>
+                    <img class="fragment" src="images/css-declaration-small.png">
+                </section>
+                <section>
+                    <section>
+                        <h2>Fonts and text</h2>
+                        <p>we can choose different font for our web page</p>
+                        <p>go to www.google.com/fonts and choose any font you love</p>
+                        <p>you will get a code like this.</p>
+                        <pre><code><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet'"type="text/css"></code></pre>
+                        <p>paste that in the head section of your html to apply the font</p>
+                    </section>
+                    <section>
+                        <p>Now open your "styles.css", remove the previous style and enter the following</p>
+                        <pre><code data-trim>
+                            html {
+                              font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+                              font-family: placeholder: this should be the rest of the output you got from Google fonts
+                            }
+                        </code></pre>
+                        <pre class="fragment"><code data-trim>
+                            h1 {
+                              font-size: 60px;
+                              text-align: center;
+                            }
+
+                            p, li {
+                              font-size: 16px;
+                              line-height: 2;
+                              letter-spacing: 1px;
+                            }
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Boxes, boxes, it's all about boxes</h2>
+                        <img src="images/boxes.jpg" alt="Boxes">
+                        <p>Most of the HTML elements on your page can be thought of as boxes sitting on top of each other.</p>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>padding, the space just around the content (e.g., around paragraph text)</li>
+                            <li>border, the solid line that sits just outside the padding</li>
+                            <li>margin, the space around the outside of the element</li>
+                        </ul>
+                        <img src="images/box-model.png" alt="Box model">
+                    </section>
+                    <section>
+                        <h2>Other css properties..</h2>
+                        <ul>
+                            <li>width (of an element)</li>
+                            <li>background-color, the color behind an element's content and padding</li>
+                            <li>color, the color of an element's content (usually text)</li>
+                            <li>text-shadow: sets a drop shadow on the text inside an element</li>
+                            <li>display: sets the display mode of an element (don't worry about this yet)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>Now add the following to your "style.css"</p>
+                        <p>Change the page color..</p>
+                        <pre><code data-trim>
+                            html {
+                              background-color: #00539F;
+                            }
+                        </code></pre>
+                        <p class="fragment">Sort the body out..</p>
+                        <pre class="fragment"><code data-trim>
+                          body {
+                              width: 600px;
+                              margin: 0 auto;
+                              background-color: #FF9500;
+                              padding: 0 20px 20px 20px;
+                              border: 5px solid black;
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <p>Continue styling..</p>
+                        <p>Style the main title</p>
+                        <pre><code data-trim>
+                            h1 {
+                              margin: 0;
+                              padding: 20px 0;
+                              color: #00539F;
+                              text-shadow: 3px 3px 1px black;
+                            }
+                        </code></pre>
+                        <p class="fragment">Center the image..</p>
+                        <pre class="fragment"><code data-trim>
+                            img {
+                              display: block;
+                              margin: 0 auto;
+                            }
+                        </code></pre>
+                    </section>
+                </section>
+                <section><p>Feel free to play around with the styles and css properties</p></section>
+                <section>[........]</section>
+                <section>
+                    <h2>Supercharging our website, with:</h2>
+                    <h1 class="fragment highlight-gold zoom-in">javascript</h1>
+                </section>
+                <section>
+                    <p>create a file named "main.js"</p>
+                    <p>include in your "index.html" as follows, just before the end of body tag:</p>
+                    <pre><code><script src="main.js"></script></code></pre>
+                </section>
+                <section>
+                    <p>Get another image, name it "logo2.png" in addition to the first image "logo1.png" in a folder images</p>
+                    <p>Now open "main.js" and put the following:</p>
+                    <pre><code data-trim>
+                        var myImage = document.querySelector('img');
+
+                        myImage.onclick = function() {
+                            var mySrc = myImage.getAttribute('src');
+                            if(mySrc === 'images/logo1.png') {
+                              myImage.setAttribute ('src','images/logo2.png');
+                            } else {
+                              myImage.setAttribute ('src','images/logo1.png');
+                            }
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <p>A lot more stuff can be done with these technologies</p>
+                </section>
+                <section>
+                    <h1>IT Training at ROXICHIMA</h1>
+                    <p>Our students will be guided on the latest technologies and best practices to develop full featured web applications</p>
+                    <p>Frontend and backend development training</p>
+                    <p><em>We also offer</em></p>
+                    <strong>Latest in android app development trainings</strong>
+                </section>
+                <section>
+                    <h1>you can access this workshop slides @</h1>
+                    <p>www.rcgcltd.com/workshop</p>
+                </section>
+
 			</div>
 		</div>
 
@@ -42,7 +289,9 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+                width: "1024",
+	           height: "720"
 			});
 		</script>
 	</body>
