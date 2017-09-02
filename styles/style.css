@@ -12,4 +12,9 @@
 section ul {
   list-style-type: none; }
 
+/* line 16, /home/kennedy/Development/rcgcltd.com/workshop/styles/style.scss */
+.color-gold {
+  color: #FFDF00;
+  text-shadow: white 2px 2px 2px; }
+
 /*# sourceMappingURL=style.css.map */
